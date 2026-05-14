@@ -1,0 +1,11 @@
+# Certificados e chaves TLS (gerados automaticamente pelo Open5GS)
+*.key
+*.pem
+*.p12
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.bak
