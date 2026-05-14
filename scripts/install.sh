@@ -63,6 +63,11 @@ done
 install -m 644 "$CONFIG_SRC/99-open5gs.conf" /etc/sysctl.d/99-open5gs.conf
 sysctl -p /etc/sysctl.d/99-open5gs.conf
 
+# freeDiameter configs (EPC: MME, HSS, SMF, PCRF)
+for conf in "$CONFIG_SRC/freeDiameter"/*.conf; do
+    install -m 640 "$conf" /etc/freeDiameter/
+done
+
 # ─── 5. NAT / iptables ──────────────────────────────────────────────────────
 info "Configuring NAT for UE traffic..."
 IFACE=$(ip route show default | awk '/default/ {print $5}' | head -1)
