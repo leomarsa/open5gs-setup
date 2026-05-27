@@ -4,8 +4,11 @@ Instalação automatizada e pronta para uso do [Open5GS](https://open5gs.org/) e
 baseada em uma configuração validada em ambiente real.
 
 Este repositório tem como objetivo disponibilizar publicamente uma customização completa
-do Open5GS para que qualquer pessoa possa replicar uma instalação funcional de 5G Core
-e EPC sem precisar partir do zero.
+do Open5GS para que **qualquer pessoa** possa replicar uma instalação funcional de 5G Core
+e EPC em seu próprio servidor ou VPS, sem precisar partir do zero.
+
+A instalação pode ser feita de duas formas: **manualmente via script** ou usando o
+**[Claude Code](https://claude.ai/code)** para guiar todo o processo de forma automatizada.
 
 ---
 
@@ -35,13 +38,13 @@ Ideal para laboratórios, pesquisa, desenvolvimento de aplicações 5G e redes p
 
 ## Pré-requisitos
 
-- Ubuntu 24.04 LTS (instalação limpa)
+- Ubuntu 24.04 LTS (instalação limpa — servidor físico, VM ou VPS)
 - Acesso root ou sudo
 - Conexão com a internet (para download dos pacotes)
 
 ---
 
-## Instalação
+## Opção 1 — Instalação manual via script
 
 ```bash
 git clone https://github.com/leomarsa/open5gs-setup.git
@@ -57,6 +60,35 @@ sudo bash scripts/install.sh 192.168.1.10
 
 A instalação leva entre 5 e 15 minutos. Ao final, a mensagem `=== Installation complete ===`
 confirma o sucesso.
+
+---
+
+## Opção 2 — Instalação via Claude Code (recomendado)
+
+O repositório inclui um arquivo `CLAUDE.md` com instruções completas para o
+[Claude Code](https://claude.ai/code) executar toda a instalação de forma guiada.
+
+**Passos:**
+
+1. Instale o Claude Code no servidor:
+   ```bash
+   npm install -g @anthropic-ai/claude-code
+   ```
+
+2. Clone o repositório e entre na pasta:
+   ```bash
+   git clone https://github.com/leomarsa/open5gs-setup.git
+   cd open5gs-setup
+   claude
+   ```
+
+3. Dentro do Claude Code, peça a instalação:
+   ```
+   instala o Open5GS neste servidor
+   ```
+
+O Claude Code vai ler o `CLAUDE.md`, detectar o IP, executar o script e verificar
+todos os serviços automaticamente.
 
 ---
 
@@ -173,7 +205,7 @@ open5gs-setup/
 │       ├── hss.conf
 │       ├── smf.conf
 │       └── pcrf.conf
-├── CLAUDE.md                   # Instruções para instalação via Claude Code
+├── CLAUDE.md                   # Instruções para o Claude Code executar a instalação
 └── SYSTEM.md                   # Referência técnica da instalação validada
 ```
 

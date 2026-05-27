@@ -7,9 +7,12 @@ em Ubuntu 24.04 LTS. **Leia este arquivo inteiro antes de executar qualquer coma
 
 ## Contexto
 
-O usuário quer instalar o Open5GS com uma configuração específica de rede móvel
-(PLMN MCC=999/MNC=70) num servidor Ubuntu 24.04. Todo o processo é automatizado
-por este repositório — não improvise nem instale por outro método.
+O usuário quer instalar o Open5GS com uma configuração customizada de rede móvel
+(PLMN MCC=999/MNC=70) num servidor ou VPS com Ubuntu 24.04 LTS. Todo o processo
+está automatizado neste repositório — não improvise nem instale por outro método.
+
+Este repositório é público e pode ser usado por qualquer pessoa. Se o repositório
+ainda não foi clonado no servidor, faça o clone primeiro (veja Passo 1).
 
 ---
 
