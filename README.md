@@ -155,7 +155,7 @@ antes de executar a instalação.
 
 ---
 
-## Acesso ao WebUI
+## WebUI
 
 Após a instalação, acesse pelo navegador:
 
@@ -166,6 +166,20 @@ Senha:   1423
 ```
 
 > **Importante:** altere a senha padrão após a primeira instalação em ambiente de produção.
+
+### Telas do WebUI
+
+**Login**
+![Tela de Login](Tela_de_Login.png)
+
+**Dashboard**
+![Dashboard](Dashboard.png)
+
+**Subscribers**
+![Subscribers](Tela_Subscribers.png)
+
+**Profiles**
+![Profiles](Tela_de_Profiles.png)
 
 ---
 
